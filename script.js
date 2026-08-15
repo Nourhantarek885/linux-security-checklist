@@ -44,3 +44,20 @@ function updateProgress() {
 }
 
 updateProgress();
+const resetButton = document.getElementById("resetProgress");
+
+if (resetButton) {
+    resetButton.addEventListener("click", function () {
+
+        checkboxes.forEach(function (checkbox, index) {
+
+            checkbox.checked = false;
+
+            localStorage.removeItem(
+                `linux-task-${index}`
+            );
+        });
+
+        updateProgress();
+    });
+}
