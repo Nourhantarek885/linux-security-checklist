@@ -78,3 +78,20 @@ input[type="checkbox"] {
     font-size: 18px;
     font-weight: bold;
 }
+.topic {
+    margin-bottom: 12px;
+}
+
+.topic-info {
+    margin: -5px 0 15px 15px;
+    padding: 10px 15px;
+
+    color: #a7f3d0;
+    background: #0f1a13;
+
+    border-left: 3px solid #22c55e;
+    border-radius: 0 8px 8px 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
