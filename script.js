@@ -41,6 +41,11 @@ function updateProgress() {
 
     progress.textContent =
         `Progress: ${percentage}% (${completed}/${total})`;
+    const progressFill = document.getElementById("progress-fill");
+
+if (progressFill) {
+    progressFill.style.width = `${percentage}%`;
+}
 }
 
 updateProgress();
