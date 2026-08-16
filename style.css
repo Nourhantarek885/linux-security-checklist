@@ -121,3 +121,10 @@ input[type="checkbox"] {
 
     transition: width 0.3s ease;
 }
+#progress-message {
+    text-align: center;
+    margin-top: 10px;
+    color: #4ade80;
+    font-size: 16px;
+    font-weight: bold;
+}
