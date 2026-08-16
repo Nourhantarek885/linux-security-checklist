@@ -41,17 +41,41 @@ function updateProgress() {
 
     progress.textContent =
         `Progress: ${percentage}% (${completed}/${total})`;
+
     const progressFill = document.getElementById("progress-fill");
 
-if (progressFill) {
-    progressFill.style.width = `${percentage}%`;
-}
+    if (progressFill) {
+        progressFill.style.width = `${percentage}%`;
+    }
+
+    const progressMessage =
+        document.getElementById("progress-message");
+
+    if (progressMessage) {
+
+        if (percentage === 100) {
+            progressMessage.textContent =
+                "🎉 All topics completed!";
+
+        } else if (percentage >= 50) {
+            progressMessage.textContent =
+                "🔥 Great progress!";
+
+        } else {
+            progressMessage.textContent =
+                "📚 Keep learning!";
+        }
+    }
 }
 
 updateProgress();
-const resetButton = document.getElementById("resetProgress");
+
+
+const resetButton =
+    document.getElementById("resetProgress");
 
 if (resetButton) {
+
     resetButton.addEventListener("click", function () {
 
         checkboxes.forEach(function (checkbox, index) {
